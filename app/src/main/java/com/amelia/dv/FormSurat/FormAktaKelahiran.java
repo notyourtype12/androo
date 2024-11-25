@@ -324,7 +324,7 @@ public class FormAktaKelahiran extends Fragment {
                         Toast.makeText(requireContext(), "Gagal memproses data: " + e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 },
-                error -> Toast.makeText(requireContext(), "Gagal mengambil data: " + error.getMessage(), Toast.LENGTH_LONG).show()
+                error -> Toast.makeText(requireContext(), "Gagall mengambil data: " + error.getMessage(), Toast.LENGTH_LONG).show()
         );
 
         queue.add(jsonObjectRequest);
