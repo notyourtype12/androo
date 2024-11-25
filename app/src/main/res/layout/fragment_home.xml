@@ -1,0 +1,468 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_db"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Welcome Section at the Top -->
+            <LinearLayout
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/k2d_bold"
+                    android:text="Selamat Datang"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/k2d_medium"
+                    android:text="Amelia Agustin"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLocation"
+                    android:layout_width="350dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="45dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="220dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/maps_picture" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/k2d_bold"
+                        android:text="Lokasi"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/locationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/k2d_bold"
+                        android:text="Kalipait, Banyuwangi"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/readInMapsCard"
+                        android:layout_width="160dp"
+                        android:layout_height="33dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="75dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/newblue"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/logo_maps" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/k2d_medium"
+                                android:gravity="end"
+                                android:text="Baca di Maps"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <FrameLayout
+                    android:id="@+id/frameDescription"
+                    android:layout_width="350dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/description"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- Container for Text and Image in a horizontal layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <!-- TextView on the left side -->
+                        <TextView
+                            android:id="@+id/descriptionText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/k2d_medium"
+                            android:paddingEnd="8dp"
+                            android:text="Digital Village Kalipait\nCepat, Mudah, dan Efisien untuk Layanan Desa!"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <!-- ImageView on the right side -->
+                        <ImageView
+                            android:id="@+id/descriptionImage"
+                            android:layout_width="102dp"
+                            android:layout_height="95dp"
+                            android:contentDescription="Icon on the right"
+                            android:src="@drawable/surat_picture" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+            <!-- Card Section, Centered in the Background -->
+            <LinearLayout
+                android:id="@+id/cardSection1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="450dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Image and Text Pair 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemAktaKelahiran"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon Akta Kelahiran"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/akteee"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="Akta Kelahiran"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Image and Text Pair 2 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemPindahPenduduk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon Pindah Penduduk"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/pindahpenduduk1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="Pindah Penduduk"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Image and Text Pair 3 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemAktaKematian"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon Akta Kematian"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/rip1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="Akta Kematian"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Image and Text Pair 4 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemAktaPernikahan"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon Akta Pernikahan"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/meridd" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="Akta Pernikahan"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardSection2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="560dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Image and Text Pair 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemKK"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon Kartu Keluarga"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/kaka" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="Kartu Keluarga"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Image and Text Pair 2 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemKTP"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon KTP"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/ktp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="KTP"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Image and Text Pair 3 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemSuratMiskin"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon Surat Miskin"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/miskinn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="Pernyataan Miskin"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Image and Text Pair 4 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/itemSKTM"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        android:contentDescription="Ikon SKTM"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/sktm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/k2d_bold"
+                        android:gravity="center"
+                        android:text="SKTM"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- News Section Title Below Cards -->
+            <TextView
+                android:id="@+id/newsTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardSection2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="34dp"
+                android:text="Berita Terkini"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/newsTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newsTitle1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="34dp"
+                android:text="Berbagai berita terkait Desa Kalipait"
+                android:textColor="@color/new_grey"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_berita"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/newsTitle2"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:overScrollMode="always"
+                android:scrollbars="horizontal" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</ScrollView>
