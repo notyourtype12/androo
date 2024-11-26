@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tlogin"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="64dp"
         android:hint="Masukkan NIK"
         android:padding="5dp"
@@ -86,7 +86,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
-            android:maxLength="20"
             android:paddingStart="20dp"
             android:textColor="@color/grey"
             android:textSize="13sp" />
