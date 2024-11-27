@@ -6,34 +6,29 @@
 
     <TextView
         android:id="@+id/tlogin"
-        android:layout_width="165dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textSize="32sp"
         android:layout_marginTop="300dp"
-        android:fontFamily="@font/poppinsbold"
-        android:paddingStart="34dp"
-        android:text="LOGIN"
-        android:textSize="32sp" />
+        android:paddingStart="34dp" />
 
     <ImageView
         android:id="@+id/gambar"
-        android:layout_width="222dp"
-        android:layout_height="189dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="-190dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_toEndOf="@id/tlogin"
+        android:layout_marginTop="100dp"
         android:src="@drawable/gambarlogin" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nik"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="336dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/tlogin"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginStart="65dp"
         android:hint="Masukkan NIK"
         android:padding="5dp"
         android:textColorHint="@color/grey"
@@ -44,9 +39,7 @@
         app:boxCornerRadiusTopStart="19dp"
         app:boxStrokeColor="@color/blue"
         app:hintTextColor="@color/bluefiled"
-        app:startIconTint="@color/blue"
-        app:tabTextAppearance="@style/TabTextStyle"
-        android:layout_centerHorizontal="true">
+        app:startIconTint="@color/blue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_nik"
@@ -62,11 +55,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="292dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/nik"
-        android:layout_marginStart="65dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginStart="65dp"
         android:hint="Masukkan Password"
         android:padding="5dp"
         android:textColorHint="@color/grey"
@@ -75,11 +68,9 @@
         app:boxCornerRadiusBottomStart="19dp"
         app:boxCornerRadiusTopEnd="19dp"
         app:boxCornerRadiusTopStart="19dp"
-        android:layout_centerHorizontal="true"
         app:boxStrokeColor="@color/blue"
         app:hintTextColor="@color/bluefiled"
-        app:startIconTint="@color/blue"
-        app:tabTextAppearance="@style/TabTextStyle">
+        app:startIconTint="@color/blue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_pass"
@@ -91,20 +82,31 @@
             android:textSize="13sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/t_lupapassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass"
+        android:layout_alignRight="@+id/pass"
+        android:layout_marginBottom="-19dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Lupa Password"
+        android:textColor="@color/blueterang"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="271dp"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
         android:layout_below="@id/pass"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button_background"
         android:backgroundTint="@color/blueterang"
         android:elevation="8dp"
-        android:text="Login"
+        android:text="Masuk"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppinsbold"/>
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -119,8 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Belum Aktivasi Akun?"
-            android:textColor="@color/black"
-            app:tabTextAppearance="@style/TabTextStyle"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tv_activate"
@@ -129,8 +130,7 @@
             android:layout_marginStart="8dp"
             android:fontFamily="sans-serif-medium"
             android:text="Aktivasi"
-            app:tabTextAppearance="@style/TabTextStyle"
-            android:textColor="@color/blue"
+            android:textColor="@color/blueterang"
             android:textStyle="bold" />
     </LinearLayout>
 
